@@ -408,7 +408,7 @@
                 
               
 
-              <time title="创建时间：2020-08-10 14:11:03 / 修改时间：18:37:26" itemprop="dateCreated datePublished" datetime="2020-08-10T14:11:03+08:00">2020-08-10</time>
+              <time title="创建时间：2020-08-10 14:11:03 / 修改时间：23:07:32" itemprop="dateCreated datePublished" datetime="2020-08-10T14:11:03+08:00">2020-08-10</time>
             
 
             
@@ -474,8 +474,7 @@
 <li><h5 id="go-mod-vendor"><a href="#go-mod-vendor" class="headerlink" title="go mod vendor"></a><code>go mod vendor</code></h5>将本地依赖添加到项目的 vendor 目录</li>
 <li><h5 id="go-mod-edit"><a href="#go-mod-edit" class="headerlink" title="go mod edit"></a><code>go mod edit</code></h5>编辑 mod 文件</li>
 </ol>
-<h1 id="对私有项目进行依赖的几种方法"><a href="#对私有项目进行依赖的几种方法" class="headerlink" title="对私有项目进行依赖的几种方法"></a>对私有项目进行依赖的几种方法</h1><ol>
-<li><h3 id="将私有项目拷贝到当前项目中（例如：pkg-目录中），替换掉项目中所有引用"><a href="#将私有项目拷贝到当前项目中（例如：pkg-目录中），替换掉项目中所有引用" class="headerlink" title="将私有项目拷贝到当前项目中（例如：pkg 目录中），替换掉项目中所有引用"></a>将私有项目拷贝到当前项目中（例如：<code>pkg</code> 目录中），替换掉项目中所有引用</h3><p><strong>优点</strong>:</p>
+<h1 id="对私有项目进行依赖的几种方法"><a href="#对私有项目进行依赖的几种方法" class="headerlink" title="对私有项目进行依赖的几种方法"></a>对私有项目进行依赖的几种方法</h1><h3 id="1-将私有项目拷贝到当前项目中（例如：pkg-目录中），替换掉项目中所有引用"><a href="#1-将私有项目拷贝到当前项目中（例如：pkg-目录中），替换掉项目中所有引用" class="headerlink" title="1. 将私有项目拷贝到当前项目中（例如：pkg 目录中），替换掉项目中所有引用"></a>1. 将私有项目拷贝到当前项目中（例如：<code>pkg</code> 目录中），替换掉项目中所有引用</h3><p><strong>优点</strong>:</p>
 <blockquote>
 <ol>
 <li>不用考虑拉取依赖代码遇到的网络问题</li>
@@ -491,8 +490,7 @@
 <li>需要替换项目中已有的引用</li>
 </ol>
 </blockquote>
-</li>
-<li><h3 id="将私有项目拷贝到当前项目中（例如：pkg-目录中），使用-go-mod-edit-replace-指向本地目录"><a href="#将私有项目拷贝到当前项目中（例如：pkg-目录中），使用-go-mod-edit-replace-指向本地目录" class="headerlink" title="将私有项目拷贝到当前项目中（例如：pkg 目录中），使用 go mod edit -replace 指向本地目录"></a>将私有项目拷贝到当前项目中（例如：<code>pkg</code> 目录中），使用 <code>go mod edit -replace</code> 指向本地目录</h3><p>使用方式：</p>
+<h3 id="2-将私有项目拷贝到当前项目中（例如：pkg-目录中），使用-go-mod-edit-replace-指向本地目录"><a href="#2-将私有项目拷贝到当前项目中（例如：pkg-目录中），使用-go-mod-edit-replace-指向本地目录" class="headerlink" title="2. 将私有项目拷贝到当前项目中（例如：pkg 目录中），使用 go mod edit -replace 指向本地目录"></a>2. 将私有项目拷贝到当前项目中（例如：<code>pkg</code> 目录中），使用 <code>go mod edit -replace</code> 指向本地目录</h3><p>使用方式：</p>
 <figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">go mod edit -replace=old[@v]=localpath</span><br></pre></td></tr></table></figure>
 <p><strong>优点</strong>:</p>
 <blockquote>
@@ -509,8 +507,7 @@
 <li>调用私有代码出现问题，需要额外排查是否由于复制带来的问题</li>
 </ol>
 </blockquote>
-</li>
-<li><h3 id="未验证-使用自建-goproxy"><a href="#未验证-使用自建-goproxy" class="headerlink" title="[未验证]使用自建 goproxy"></a>[未验证]使用自建 <a href="https://github.com/goproxy/goproxy" target="_blank" rel="noopener">goproxy</a></h3><p>goproxy 可以代理各种开源依赖，并加速对依赖的访问，网上有许多对其进行改造以访问私有项目的案例。</p>
+<h3 id="3-未验证-使用自建-goproxy"><a href="#3-未验证-使用自建-goproxy" class="headerlink" title="3. [未验证]使用自建 goproxy"></a>3. [未验证]使用自建 <a href="https://github.com/goproxy/goproxy" target="_blank" rel="noopener">goproxy</a></h3><p>goproxy 可以代理各种开源依赖，并加速对依赖的访问，网上有许多对其进行改造以访问私有项目的案例。</p>
 <p><strong>优点</strong>:</p>
 <blockquote>
 <ol>
@@ -527,8 +524,7 @@
 <li>使用需要进行网络请求，有连接失败的可能</li>
 </ol>
 </blockquote>
-</li>
-<li><h3 id="本文推荐-借助-gitlab-Personal-Access-Tokens-访问私有依赖"><a href="#本文推荐-借助-gitlab-Personal-Access-Tokens-访问私有依赖" class="headerlink" title="[本文推荐]借助 gitlab Personal Access Tokens 访问私有依赖"></a>[本文推荐]借助 gitlab <code>Personal Access Tokens</code> 访问私有依赖</h3><p>gitlab <code>Personal Access Tokens</code> 提供 <code>http</code> 访问 gitlab 时认证的能力。既然私有依赖可以通过 <code>http</code> + 账号密码进行 <code>git clone</code>，那么通过 <code>http</code> + <code>token</code> 也可以进行访问。 </p>
+<h3 id="4-本文推荐-借助-gitlab-Personal-Access-Tokens-访问私有依赖"><a href="#4-本文推荐-借助-gitlab-Personal-Access-Tokens-访问私有依赖" class="headerlink" title="4. [本文推荐]借助 gitlab Personal Access Tokens 访问私有依赖"></a>4. [本文推荐]借助 gitlab <code>Personal Access Tokens</code> 访问私有依赖</h3><p>gitlab <code>Personal Access Tokens</code> 提供 <code>http</code> 访问 gitlab 时认证的能力。既然私有依赖可以通过 <code>http</code> + 账号密码进行 <code>git clone</code>，那么通过 <code>http</code> + <code>token</code> 也可以进行访问。 </p>
 <p><strong>优点</strong>：</p>
 <blockquote>
 <ol>
@@ -544,8 +540,6 @@
 <li>持续集成可能也需要进行一定配置</li>
 </ol>
 </blockquote>
-</li>
-</ol>
 <h1 id="如何借助-gitlab-Personal-Access-Tokens-访问私有依赖"><a href="#如何借助-gitlab-Personal-Access-Tokens-访问私有依赖" class="headerlink" title="如何借助 gitlab Personal Access Tokens 访问私有依赖"></a>如何借助 gitlab <code>Personal Access Tokens</code> 访问私有依赖</h1><h3 id="1-获取-gitlab-token"><a href="#1-获取-gitlab-token" class="headerlink" title="1. 获取 gitlab token"></a>1. 获取 gitlab token</h3><blockquote>
 <ol>
 <li>进入Gitlab –&gt; Settings –&gt; Access Tokens    # 可直接访问地址：<code>{gitlab.example.com}</code>/profile/personal_access_tokens</li>
@@ -554,8 +548,12 @@
 </ol>
 </blockquote>
 <h3 id="2-将-token-配置在-git-请求头中"><a href="#2-将-token-配置在-git-请求头中" class="headerlink" title="2. 将 token 配置在 git 请求头中"></a>2. 将 token 配置在 git 请求头中</h3><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git config --global http.extraheader "PRIVATE-TOKEN: YOUR_TOKEN"</span><br></pre></td></tr></table></figure>
-<h3 id="3-将-git-对-ssh-的请求专为-http"><a href="#3-将-git-对-ssh-的请求专为-http" class="headerlink" title="3. 将 git 对 ssh 的请求专为 http"></a>3. 将 git 对 ssh 的请求专为 http</h3><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git config --global url."git@gitlab.com[:8080]".insteadOf "http://gitlab.com[:8080]" # 推荐直接替换掉所有网址的请求。ssh 和 http 地址均为正常 git clone 地址。注意：有可能携带端口号。</span><br></pre></td></tr></table></figure>
-<h3 id="4"><a href="#4" class="headerlink" title="4."></a>4.</h3>
+<h3 id="3-将-git-对-ssh-的请求专为-http"><a href="#3-将-git-对-ssh-的请求专为-http" class="headerlink" title="3. 将 git 对 ssh 的请求专为 http"></a>3. 将 git 对 ssh 的请求专为 http</h3><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git config --global url."ssh://git@gitlab.com[:8080]".insteadOf "http://gitlab.com[:8080]" # 推荐直接替换掉所有网址的请求。ssh 和 http 地址均为正常 git clone 地址。注意：有可能携带端口号。</span><br></pre></td></tr></table></figure>
+<h3 id="4-将私有仓库加入-GOPRIVATE，避免对其进行完整性校验"><a href="#4-将私有仓库加入-GOPRIVATE，避免对其进行完整性校验" class="headerlink" title="4. 将私有仓库加入 GOPRIVATE，避免对其进行完整性校验"></a>4. 将私有仓库加入 <code>GOPRIVATE</code>，避免对其进行完整性校验</h3><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">go env -w GOPRIVATE=gitlab.com[:8080] # 私有仓库地址的 http 地址，注意：不包含协议，有可能包含端口</span><br></pre></td></tr></table></figure>
+<h3 id="5-可选-替换掉部分申明"><a href="#5-可选-替换掉部分申明" class="headerlink" title="5. [可选]替换掉部分申明"></a>5. [可选]替换掉部分申明</h3><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">go mod edit -replace=gitlab.example.cn/project@v1.0.0=example.cn/project@v1.0.0</span><br></pre></td></tr></table></figure>
+<h3 id="6-整理当前项目，添加需要的依赖"><a href="#6-整理当前项目，添加需要的依赖" class="headerlink" title="6. 整理当前项目，添加需要的依赖"></a>6. 整理当前项目，添加需要的依赖</h3><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">go mod tidy</span><br></pre></td></tr></table></figure>
+<h3 id="6-可选-将已下载到本地的依赖打包进项目"><a href="#6-可选-将已下载到本地的依赖打包进项目" class="headerlink" title="6. [可选]将已下载到本地的依赖打包进项目"></a>6. [可选]将已下载到本地的依赖打包进项目</h3><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">go mod vendor</span><br></pre></td></tr></table></figure>
+
           
         
       

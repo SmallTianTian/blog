@@ -103,17 +103,18 @@
 
 
 
-  <meta name="description" content="go mod 基础先复习下 golang mod 的基础（仅列举出对本文章中使用到的命令，更多命令请参考官方文档）  go mod init在当前目录新建 mod 文件，并启用 mod 进行依赖管理 go mod tidy整理当前项目，添加未包含/删除无用的依赖 go mod vendor将本地依赖添加到项目的 vendor 目录 go mod edit编辑 mod 文件  对私有项目进行依赖的几">
+  <meta name="description" content="复习 go mod 基础先复习下 golang mod 的基础（仅列举出对本文章中使用到的命令，更多命令请参考官方文档） go mod init在当前目录新建 mod 文件，并启用 mod 进行依赖管理 go mod tidy整理当前项目，添加未包含/删除无用的依赖 go mod vendor将本地依赖添加到项目的 vendor 目录 go mod edit编辑 mod 文件  对私有项目进行依赖">
+<meta name="keywords" content="gitlab mod,private project,go mod">
 <meta property="og:type" content="article">
 <meta property="og:title" content="让你的 golang 用上私有 mod">
 <meta property="og:url" content="https://blog.tianxu.xin/2020/08/10/让你的-golang-用上私有-mod/index.html">
 <meta property="og:site_name" content="tick&#39;s blog">
-<meta property="og:description" content="go mod 基础先复习下 golang mod 的基础（仅列举出对本文章中使用到的命令，更多命令请参考官方文档）  go mod init在当前目录新建 mod 文件，并启用 mod 进行依赖管理 go mod tidy整理当前项目，添加未包含/删除无用的依赖 go mod vendor将本地依赖添加到项目的 vendor 目录 go mod edit编辑 mod 文件  对私有项目进行依赖的几">
+<meta property="og:description" content="复习 go mod 基础先复习下 golang mod 的基础（仅列举出对本文章中使用到的命令，更多命令请参考官方文档） go mod init在当前目录新建 mod 文件，并启用 mod 进行依赖管理 go mod tidy整理当前项目，添加未包含/删除无用的依赖 go mod vendor将本地依赖添加到项目的 vendor 目录 go mod edit编辑 mod 文件  对私有项目进行依赖">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2020-08-10T15:07:32.436Z">
+<meta property="og:updated_time" content="2020-08-11T02:43:29.122Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="让你的 golang 用上私有 mod">
-<meta name="twitter:description" content="go mod 基础先复习下 golang mod 的基础（仅列举出对本文章中使用到的命令，更多命令请参考官方文档）  go mod init在当前目录新建 mod 文件，并启用 mod 进行依赖管理 go mod tidy整理当前项目，添加未包含/删除无用的依赖 go mod vendor将本地依赖添加到项目的 vendor 目录 go mod edit编辑 mod 文件  对私有项目进行依赖的几">
+<meta name="twitter:description" content="复习 go mod 基础先复习下 golang mod 的基础（仅列举出对本文章中使用到的命令，更多命令请参考官方文档） go mod init在当前目录新建 mod 文件，并启用 mod 进行依赖管理 go mod tidy整理当前项目，添加未包含/删除无用的依赖 go mod vendor将本地依赖添加到项目的 vendor 目录 go mod edit编辑 mod 文件  对私有项目进行依赖">
 
 
 
@@ -409,12 +410,24 @@
                 
               
 
-              <time title="创建时间：2020-08-10 14:11:03 / 修改时间：23:07:32" itemprop="dateCreated datePublished" datetime="2020-08-10T14:11:03+08:00">2020-08-10</time>
+              <time title="创建时间：2020-08-10 14:11:03" itemprop="dateCreated datePublished" datetime="2020-08-10T14:11:03+08:00">2020-08-10</time>
             
 
             
               
 
+              
+                
+                <span class="post-meta-divider">|</span>
+                
+
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">更新于</span>
+                
+                <time title="修改时间：2020-08-11 10:43:29" itemprop="dateModified" datetime="2020-08-11T10:43:29+08:00">2020-08-11</time>
               
             
           </span>
@@ -466,8 +479,7 @@
       
 
       
-        <h1 id="go-mod-基础"><a href="#go-mod-基础" class="headerlink" title="go mod 基础"></a><code>go mod</code> 基础</h1><p>先复习下 golang mod 的基础（仅列举出对本文章中使用到的命令，更多命令请参考<a href="https://blog.golang.org/using-go-modules" target="_blank" rel="noopener">官方文档</a>）</p>
-<ol>
+        <h1 id="复习-go-mod-基础"><a href="#复习-go-mod-基础" class="headerlink" title="复习 go mod 基础"></a>复习 <code>go mod</code> 基础</h1><h3 id="先复习下-golang-mod-的基础（仅列举出对本文章中使用到的命令，更多命令请参考官方文档）"><a href="#先复习下-golang-mod-的基础（仅列举出对本文章中使用到的命令，更多命令请参考官方文档）" class="headerlink" title="先复习下 golang mod 的基础（仅列举出对本文章中使用到的命令，更多命令请参考官方文档）"></a>先复习下 golang mod 的基础（仅列举出对本文章中使用到的命令，更多命令请参考<a href="https://blog.golang.org/using-go-modules" target="_blank" rel="noopener">官方文档</a>）</h3><ol>
 <li><h5 id="go-mod-init"><a href="#go-mod-init" class="headerlink" title="go mod init"></a><code>go mod init</code></h5>在当前目录新建 mod 文件，并启用 mod 进行依赖管理</li>
 <li><h5 id="go-mod-tidy"><a href="#go-mod-tidy" class="headerlink" title="go mod tidy"></a><code>go mod tidy</code></h5>整理当前项目，添加未包含/删除无用的依赖</li>
 <li><h5 id="go-mod-vendor"><a href="#go-mod-vendor" class="headerlink" title="go mod vendor"></a><code>go mod vendor</code></h5>将本地依赖添加到项目的 vendor 目录</li>
@@ -606,6 +618,16 @@
 
     <footer class="post-footer">
       
+        <div class="post-tags">
+          
+            <a href="/tags/gitlab-mod/" rel="tag"><i class="fa fa-tag"></i> gitlab mod</a>
+          
+            <a href="/tags/private-project/" rel="tag"><i class="fa fa-tag"></i> private project</a>
+          
+            <a href="/tags/go-mod/" rel="tag"><i class="fa fa-tag"></i> go mod</a>
+          
+        </div>
+      
 
       
       
@@ -690,15 +712,40 @@
                 <div class="site-state-item site-state-categories">
                   
                     
+                      <a href="/categories/">
+                    
+                  
+                    
                     
                       
                     
                     <span class="site-state-item-count">1</span>
                     <span class="site-state-item-name">分类</span>
-                  
+                  </a>
                 </div>
               
 
+              
+                
+                
+                <div class="site-state-item site-state-tags">
+                  
+                    
+                      <a href="/tags/">
+                    
+                  
+                    
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                    <span class="site-state-item-count">3</span>
+                    <span class="site-state-item-name">标签</span>
+                  </a>
+                </div>
               
             </nav>
           
@@ -759,7 +806,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#go-mod-基础"><span class="nav-number">1.</span> <span class="nav-text">go mod 基础</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#go-mod-init"><span class="nav-number">1.0.0.0.1.</span> <span class="nav-text">go mod init</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#go-mod-tidy"><span class="nav-number">1.0.0.0.2.</span> <span class="nav-text">go mod tidy</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#go-mod-vendor"><span class="nav-number">1.0.0.0.3.</span> <span class="nav-text">go mod vendor</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#go-mod-edit"><span class="nav-number">1.0.0.0.4.</span> <span class="nav-text">go mod edit</span></a></li></ol></li></ol><li class="nav-item nav-level-1"><a class="nav-link" href="#对私有项目进行依赖的几种方法"><span class="nav-number">2.</span> <span class="nav-text">对私有项目进行依赖的几种方法</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#1-将私有项目拷贝到当前项目中（例如：pkg-目录中），替换掉项目中所有引用"><span class="nav-number">2.0.1.</span> <span class="nav-text">1. 将私有项目拷贝到当前项目中（例如：pkg 目录中），替换掉项目中所有引用</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-将私有项目拷贝到当前项目中（例如：pkg-目录中），使用-go-mod-edit-replace-指向本地目录"><span class="nav-number">2.0.2.</span> <span class="nav-text">2. 将私有项目拷贝到当前项目中（例如：pkg 目录中），使用 go mod edit -replace 指向本地目录</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#3-未验证-使用自建-goproxy"><span class="nav-number">2.0.3.</span> <span class="nav-text">3. [未验证]使用自建 goproxy</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#4-本文推荐-借助-gitlab-Personal-Access-Tokens-访问私有依赖"><span class="nav-number">2.0.4.</span> <span class="nav-text">4. [本文推荐]借助 gitlab Personal Access Tokens 访问私有依赖</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#如何借助-gitlab-Personal-Access-Tokens-访问私有依赖"><span class="nav-number">3.</span> <span class="nav-text">如何借助 gitlab Personal Access Tokens 访问私有依赖</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#1-获取-gitlab-token"><span class="nav-number">3.0.1.</span> <span class="nav-text">1. 获取 gitlab token</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-将-token-配置在-git-请求头中"><span class="nav-number">3.0.2.</span> <span class="nav-text">2. 将 token 配置在 git 请求头中</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#3-将-git-对-ssh-的请求专为-http"><span class="nav-number">3.0.3.</span> <span class="nav-text">3. 将 git 对 ssh 的请求专为 http</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#4-将私有仓库加入-GOPRIVATE，避免对其进行完整性校验"><span class="nav-number">3.0.4.</span> <span class="nav-text">4. 将私有仓库加入 GOPRIVATE，避免对其进行完整性校验</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#5-可选-替换掉部分申明"><span class="nav-number">3.0.5.</span> <span class="nav-text">5. [可选]替换掉部分申明</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#6-整理当前项目，添加需要的依赖"><span class="nav-number">3.0.6.</span> <span class="nav-text">6. 整理当前项目，添加需要的依赖</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#6-可选-将已下载到本地的依赖打包进项目"><span class="nav-number">3.0.7.</span> <span class="nav-text">6. [可选]将已下载到本地的依赖打包进项目</span></a></li></ol></li></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#复习-go-mod-基础"><span class="nav-number">1.</span> <span class="nav-text">复习 go mod 基础</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#先复习下-golang-mod-的基础（仅列举出对本文章中使用到的命令，更多命令请参考官方文档）"><span class="nav-number">1.0.1.</span> <span class="nav-text">先复习下 golang mod 的基础（仅列举出对本文章中使用到的命令，更多命令请参考官方文档）</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#go-mod-init"><span class="nav-number">1.0.1.0.1.</span> <span class="nav-text">go mod init</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#go-mod-tidy"><span class="nav-number">1.0.1.0.2.</span> <span class="nav-text">go mod tidy</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#go-mod-vendor"><span class="nav-number">1.0.1.0.3.</span> <span class="nav-text">go mod vendor</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#go-mod-edit"><span class="nav-number">1.0.1.0.4.</span> <span class="nav-text">go mod edit</span></a></li></ol></li></ol></li></ol><li class="nav-item nav-level-1"><a class="nav-link" href="#对私有项目进行依赖的几种方法"><span class="nav-number">2.</span> <span class="nav-text">对私有项目进行依赖的几种方法</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#1-将私有项目拷贝到当前项目中（例如：pkg-目录中），替换掉项目中所有引用"><span class="nav-number">2.0.1.</span> <span class="nav-text">1. 将私有项目拷贝到当前项目中（例如：pkg 目录中），替换掉项目中所有引用</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-将私有项目拷贝到当前项目中（例如：pkg-目录中），使用-go-mod-edit-replace-指向本地目录"><span class="nav-number">2.0.2.</span> <span class="nav-text">2. 将私有项目拷贝到当前项目中（例如：pkg 目录中），使用 go mod edit -replace 指向本地目录</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#3-未验证-使用自建-goproxy"><span class="nav-number">2.0.3.</span> <span class="nav-text">3. [未验证]使用自建 goproxy</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#4-本文推荐-借助-gitlab-Personal-Access-Tokens-访问私有依赖"><span class="nav-number">2.0.4.</span> <span class="nav-text">4. [本文推荐]借助 gitlab Personal Access Tokens 访问私有依赖</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#如何借助-gitlab-Personal-Access-Tokens-访问私有依赖"><span class="nav-number">3.</span> <span class="nav-text">如何借助 gitlab Personal Access Tokens 访问私有依赖</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#1-获取-gitlab-token"><span class="nav-number">3.0.1.</span> <span class="nav-text">1. 获取 gitlab token</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-将-token-配置在-git-请求头中"><span class="nav-number">3.0.2.</span> <span class="nav-text">2. 将 token 配置在 git 请求头中</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#3-将-git-对-ssh-的请求专为-http"><span class="nav-number">3.0.3.</span> <span class="nav-text">3. 将 git 对 ssh 的请求专为 http</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#4-将私有仓库加入-GOPRIVATE，避免对其进行完整性校验"><span class="nav-number">3.0.4.</span> <span class="nav-text">4. 将私有仓库加入 GOPRIVATE，避免对其进行完整性校验</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#5-可选-替换掉部分申明"><span class="nav-number">3.0.5.</span> <span class="nav-text">5. [可选]替换掉部分申明</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#6-整理当前项目，添加需要的依赖"><span class="nav-number">3.0.6.</span> <span class="nav-text">6. 整理当前项目，添加需要的依赖</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#6-可选-将已下载到本地的依赖打包进项目"><span class="nav-number">3.0.7.</span> <span class="nav-text">6. [可选]将已下载到本地的依赖打包进项目</span></a></li></ol></li></div>
             
 
           </div>

@@ -1,0 +1,575 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
+<meta name="theme-color" content="#222">
+<meta name="generator" content="Hexo 3.8.0">
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png">
+  <link rel="mask-icon" href="/images/logo.svg" color="#222">
+
+<link rel="stylesheet" href="/css/main.css">
+
+
+<link rel="stylesheet" href="/lib/font-awesome/css/all.min.css">
+
+<script id="hexo-configurations">
+    var NexT = window.NexT || {};
+    var CONFIG = {"hostname":"tianxu.xin","root":"/","scheme":"Gemini","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"hide","padding":18,"offset":12,"onmobile":true},"copycode":{"enable":true,"show_result":true,"style":null},"back2top":{"enable":true,"sidebar":false,"scrollpercent":false},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":false,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}}};
+  </script>
+
+  <meta property="og:type" content="website">
+<meta property="og:title" content="tick&#39;s blog">
+<meta property="og:url" content="https://tianxu.xin/index.html">
+<meta property="og:site_name" content="tick&#39;s blog">
+<meta property="og:locale" content="zh-CN">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="tick&#39;s blog">
+
+<link rel="canonical" href="https://tianxu.xin/">
+
+
+<script id="page-configurations">
+  // https://hexo.io/docs/variables.html
+  CONFIG.page = {
+    sidebar: "",
+    isHome : true,
+    isPost : false,
+    lang   : 'zh-CN'
+  };
+</script>
+
+  <title>tick's blog</title>
+  
+
+
+
+
+
+
+  <noscript>
+  <style>
+  .use-motion .brand,
+  .use-motion .menu-item,
+  .sidebar-inner,
+  .use-motion .post-block,
+  .use-motion .pagination,
+  .use-motion .comments,
+  .use-motion .post-header,
+  .use-motion .post-body,
+  .use-motion .collection-header { opacity: initial; }
+
+  .use-motion .site-title,
+  .use-motion .site-subtitle {
+    opacity: initial;
+    top: initial;
+  }
+
+  .use-motion .logo-line-before i { left: initial; }
+  .use-motion .logo-line-after i { right: initial; }
+  </style>
+</noscript>
+
+  <!-- 页面点击小红心 -->
+  <script type="text/javascript" src="/js/src/clicklove.js"></script>
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage">
+  <div class="container use-motion">
+    <div class="headband"></div>
+
+    <header class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="切换导航栏">
+      <span class="toggle-line toggle-line-first"></span>
+      <span class="toggle-line toggle-line-middle"></span>
+      <span class="toggle-line toggle-line-last"></span>
+    </div>
+  </div>
+
+  <div class="site-meta">
+
+    <a href="/" class="brand" rel="start">
+      <span class="logo-line-before"><i></i></span>
+      <h1 class="site-title">tick's blog</h1>
+      <span class="logo-line-after"><i></i></span>
+    </a>
+  </div>
+
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger">
+    </div>
+  </div>
+</div>
+
+
+
+
+<nav class="site-nav">
+  <ul id="menu" class="main-menu menu">
+        <li class="menu-item menu-item-home">
+
+    <a href="/" rel="section"><i class="fa fa-home fa-fw"></i>首页</a>
+
+  </li>
+        <li class="menu-item menu-item-about">
+
+    <a href="/about/" rel="section"><i class="fa fa-user fa-fw"></i>关于</a>
+
+  </li>
+        <li class="menu-item menu-item-tags">
+
+    <a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>标签</a>
+
+  </li>
+        <li class="menu-item menu-item-categories">
+
+    <a href="/categories/" rel="section"><i class="fa fa-th fa-fw"></i>分类</a>
+
+  </li>
+        <li class="menu-item menu-item-archives">
+
+    <a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>归档</a>
+
+  </li>
+  </ul>
+</nav>
+
+
+
+
+</div>
+    </header>
+
+    
+  <div class="back-to-top">
+    <i class="fa fa-arrow-up"></i>
+    <span>0%</span>
+  </div>
+  <div class="reading-progress-bar"></div>
+
+  <a href="https://github.com/SmallTianTian" class="github-corner" title="Follow me on GitHub" aria-label="Follow me on GitHub" rel="noopener" target="_blank"><svg width="80" height="80" viewbox="0 0 250 250" aria-hidden="true"><path d="M0,0 L115,115 L130,115 L142,142 L250,250 L250,0 Z"/><path d="M128.3,109.0 C113.8,99.7 119.0,89.6 119.0,89.6 C122.0,82.7 120.5,78.6 120.5,78.6 C119.2,72.0 123.4,76.3 123.4,76.3 C127.3,80.9 125.5,87.3 125.5,87.3 C122.9,97.6 130.6,101.9 134.4,103.2" fill="currentColor" style="transform-origin: 130px 106px;" class="octo-arm"/><path d="M115.0,115.0 C114.9,115.1 118.7,116.5 119.8,115.4 L133.7,101.6 C136.9,99.2 139.9,98.4 142.2,98.6 C133.8,88.0 127.5,74.4 143.8,58.0 C148.5,53.4 154.0,51.2 159.7,51.0 C160.3,49.4 163.2,43.6 171.4,40.1 C171.4,40.1 176.1,42.5 178.8,56.2 C183.1,58.6 187.2,61.8 190.9,65.4 C194.5,69.0 197.7,73.2 200.1,77.6 C213.8,80.2 216.3,84.9 216.3,84.9 C212.7,93.1 206.9,96.0 205.4,96.6 C205.1,102.4 203.0,107.8 198.3,112.5 C181.9,128.9 168.3,122.5 157.7,114.1 C157.9,116.9 156.7,120.9 152.7,124.9 L141.0,136.5 C139.8,137.7 141.6,141.9 141.8,141.8 Z" fill="currentColor" class="octo-body"/></svg></a>
+
+
+    <main class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          
+
+          <div class="content index posts-expand">
+            
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="https://tianxu.xin/2020/08/10/让你的-golang-用上私有-mod/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.png">
+      <meta itemprop="name" content="tick">
+      <meta itemprop="description" content>
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="tick's blog">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/2020/08/10/让你的-golang-用上私有-mod/" class="post-title-link" itemprop="url">让你的 golang 用上私有 mod</a>
+        </h2>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+
+              <time title="创建时间：2020-08-10 14:11:03" itemprop="dateCreated datePublished" datetime="2020-08-10T14:11:03+08:00">2020-08-10</time>
+            </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="far fa-calendar-check"></i>
+                </span>
+                <span class="post-meta-item-text">更新于</span>
+                <time title="修改时间：2020-09-09 22:43:20" itemprop="dateModified" datetime="2020-09-09T22:43:20+08:00">2020-09-09</time>
+              </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-folder"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/golang/" itemprop="url" rel="index"><span itemprop="name">golang</span></a>
+                </span>
+            </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <h2 id="复习基础"><a href="#复习基础" class="headerlink" title="复习基础"></a>复习基础</h2><h3 id="先复习下-golang-mod-的基础（仅列举出对本文章中使用到的命令，更多命令请参考官方文档）"><a href="#先复习下-golang-mod-的基础（仅列举出对本文章中使用到的命令，更多命令请参考官方文档）" class="headerlink" title="先复习下 golang mod 的基础（仅列举出对本文章中使用到的命令，更多命令请参考官方文档）"></a>先复习下 golang mod 的基础（仅列举出对本文章中使用到的命令，更多命令请参考<a href="https://blog.golang.org/using-go-modules" target="_blank" rel="noopener">官方文档</a>）</h3><ul>
+<li><p>go mod init<br> 在当前目录新建 mod 文件，并启用 mod 进行依赖管理</p>
+</li>
+<li><p>go mod tidy<br> 整理当前项目，添加未包含/删除无用的依赖</p>
+</li>
+<li><p>go mod vendor<br> 将本地依赖添加到项目的 vendor 目录</p>
+</li>
+<li><p>go mod edit<br> 编辑 mod 文件</p>
+</li>
+</ul>
+<h2 id="对私有项目进行依赖的几种方法"><a href="#对私有项目进行依赖的几种方法" class="headerlink" title="对私有项目进行依赖的几种方法"></a>对私有项目进行依赖的几种方法</h2><ol>
+<li><p>将私有项目拷贝到当前项目中（例如：<code>pkg</code> 目录中），替换掉项目中所有引用</p>
+<p><strong>优点</strong>:</p>
+<blockquote>
+<ol>
+<li>不用考虑拉取依赖代码遇到的网络问题</li>
+<li>私有项目改动带来的 bug 也无法带来影响</li>
+<li>可以自由的对私有项目代码进行改动，不必担心影响其他人的集成</li>
+</ol>
+</blockquote>
+<p><strong>缺点</strong>：</p>
+<blockquote>
+<ol>
+<li>想要使用最新的私有代码，只能手动复制替换掉原来的代码</li>
+<li>调用私有代码出现问题，需要额外排查是否由于复制带来的问题</li>
+<li>需要替换项目中已有的引用</li>
+</ol>
+</blockquote>
+</li>
+<li><p>将私有项目拷贝到当前项目中（例如：<code>pkg</code> 目录中），使用 <code>go mod edit -replace</code> 指向本地目录</p>
+<p>使用方式：</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">go mod edit -replace=old[@v]=localpath</span><br></pre></td></tr></table></figure>
+<p><strong>优点</strong>:</p>
+<blockquote>
+<ol>
+<li>不用考虑拉取依赖代码遇到的网络问题</li>
+<li>私有项目改动带来的 bug 也无法带来影响</li>
+<li>可以自由的对私有项目代码进行改动，不必担心影响其他人的集成</li>
+</ol>
+</blockquote>
+<p><strong>缺点</strong>:</p>
+<blockquote>
+<ol>
+<li>想要使用最新的私有代码，只能手动复制替换掉原来的代码</li>
+<li>调用私有代码出现问题，需要额外排查是否由于复制带来的问题</li>
+</ol>
+</blockquote>
+</li>
+<li><p>[未验证]使用自建 <a href="https://github.com/goproxy/goproxy" target="_blank" rel="noopener">goproxy</a></p>
+<p>goproxy 可以代理各种开源依赖，并加速对依赖的访问，网上有许多对其进行改造以访问私有项目的案例。</p>
+<p><strong>优点</strong>:</p>
+<blockquote>
+<ol>
+<li>加速所有依赖的访问速度</li>
+<li>本地配置代理地址即可使用，无需改动项目任何代码</li>
+<li>能随私有依赖的迭代而升级</li>
+</ol>
+</blockquote>
+<p><strong>缺点</strong>：</p>
+<blockquote>
+<ol>
+<li>需要一台专门的服务器</li>
+<li>需要改造，有额外的开发工作</li>
+<li>使用需要进行网络请求，有连接失败的可能</li>
+</ol>
+</blockquote>
+</li>
+<li><p>[本文推荐]借助 gitlab <code>ssh</code> 访问私有依赖</p>
+<p>gitlab <code>ssh</code> 提供不同于 <code>http</code> 访问 gitlab 时认证的能力。</p>
+<p><strong>优点</strong>：</p>
+<blockquote>
+<ol>
+<li>和平常下载项目一样采用 <code>ssh</code> 方式</li>
+<li>依靠 <code>go.mod</code>，能主动选择使用的版本</li>
+<li>不用对项目本身进行任何改动</li>
+<li>只用额外加入一行命令</li>
+</ol>
+</blockquote>
+<p><strong>缺点</strong>:</p>
+<blockquote>
+<ol>
+<li>每位新加入的开发人员都需要使用 <code>ssh</code></li>
+<li>每位新加入的开发人员都需要执行特定命令</li>
+<li>持续集成可能也需要进行一定配置</li>
+</ol>
+</blockquote>
+</li>
+</ol>
+<h2 id="如何借助-gitlab-ssh-访问私有依赖"><a href="#如何借助-gitlab-ssh-访问私有依赖" class="headerlink" title="如何借助 gitlab ssh 访问私有依赖"></a>如何借助 gitlab <code>ssh</code> 访问私有依赖</h2><ol>
+<li><p>生成 <code>ssh</code> 密钥</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ssh-keygen # 建议：回车三连，不要进行额外操作</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>将密钥配置在 gitlab</p>
+<blockquote>
+<p>将 <code>~/.ssh/id_rsa.pub</code> 内容粘贴到 gitlab –&gt; settings –&gt; SSH Keys</p>
+</blockquote>
+</li>
+<li><p>将 git 对 http 的请求专为 ssh</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git config --global url."ssh://git@gitlab.com[:8080]".insteadOf "http://gitlab.com[:8080]" # 推荐直接替换掉所有网址的请求。ssh 和 http 地址均为正常 git clone 地址。注意：有可能携带端口号。</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>将私有仓库加入 <code>GOPRIVATE</code>，避免对其进行完整性校验</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">go env -w GOPRIVATE=gitlab.com[:8080] # 私有仓库地址的 http 地址，注意：不包含协议，有可能包含端口</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>[可选]替换掉部分申明</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">go mod edit -replace=gitlab.example.cn/project@v1.0.0=example.cn/project@v1.0.0</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>整理当前项目，添加需要的依赖</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">go mod tidy</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>[可选]将已下载到本地的依赖打包进项目</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">go mod vendor</span><br></pre></td></tr></table></figure>
+</li>
+</ol>
+<hr>
+<h2 id="整理下分析过程"><a href="#整理下分析过程" class="headerlink" title="整理下分析过程"></a>整理下分析过程</h2><ol>
+<li><p>执行 <code>go mod tidy</code> 报什么错，为什么报错？</p>
+<blockquote>
+<p>没挂代理导致的失败不在本次的讨论范围。</p>
+</blockquote>
+<ul>
+<li><p>无法找到私有模块</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#</span> root@root: # go mod tidy</span><br><span class="line">go: finding module for package example.cn/pkg/project/util</span><br><span class="line">example.cn/pkg/main-project/cmd imports</span><br><span class="line">	example.cn/pkg/project/util: cannot find module providing package example.cn/pkg/project/util: unrecognized import path "example.cn/pkg/project/util": reading https://example.cn/pkg/project/util?go-get=1: 404 Not Found</span><br></pre></td></tr></table></figure>
+<p>错误的结尾和平时使用 <code>go get</code> 获取 github 上开源依赖超时时一致，都包含 <code>go-get=1</code>，那有没有一种可能，<code>go mod</code> 就是使用和 <code>go get</code> 一样的方式去获取依赖呢？Do it，尝试一下 <code>go get</code></p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#</span> root@root: # go get example.cn/pkg/project/util</span><br><span class="line">go get example.cn/pkg/project/util: unrecognized import path "example.cn/pkg/project/util": reading https://example.cn/pkg/project/util?go-get=1: 404 Not Found</span><br></pre></td></tr></table></figure>
+<p>高度重合，验证我们猜想可能靠谱。</p>
+</li>
+<li><p>看看 <code>go get</code> 做了什么</p>
+<p>既然 <code>go mod</code> 获取依赖和 <code>go get</code> 可能一致，那先看看 <code>go get</code> 做了什么也无妨。我们<strong>切换出项目</strong>，尝试获取一个开源 <code>go</code> 项目，夹点儿私货，一个很好用的 <code>RESTFUL</code> 客户端，直接传入 struct 即可，返回结果也能自动解析为 struct。</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">go get -u github.com/SmallTianTian/simple-go-http</span><br></pre></td></tr></table></figure>
+<p><strong>注意</strong>：不能在拥有 <code>go.mod</code> 的项目中执行此命令，切回根目录是个好选择。</p>
+<p><code>go get</code> 获取到的项目将放置在 <code>GOPATH/src</code> 中，我习惯于将 <code>GOPATH</code> 设置为 <code>~/go</code>，我们找到刚刚下载的项目。</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#</span> root@root: # cd ~/go/src/github.com/SmallTianTian/simple-go-http</span><br><span class="line"><span class="meta">#</span> root@root: # git status</span><br><span class="line">On branch master</span><br><span class="line">Your branch is up to date with 'origin/master'.</span><br><span class="line"></span><br><span class="line">nothing to commit, working tree clean</span><br></pre></td></tr></table></figure>
+<p>不要问我为什么执行 <code>git status</code>，问就是手抖（真实原因是我配置了 shell 面板，被 git 版本控制的项目自动显示当前分支）。</p>
+<p>这里可以看出，<code>go get</code> 是将项目直接 <code>git clone</code> 到本地，并按照包名递归创建了目录。</p>
+</li>
+</ul>
+</li>
+<li><p>知道了错误，并猜测获取依赖和 <code>go get</code> 有关，该如何处理</p>
+<ul>
+<li><p><code>go get</code> 是采用的 <code>git clone</code> 哪种协议？</p>
+<p><code>git clone</code> 可以采用 <code>http</code>，也可以采用 <code>ssh</code>。但 <code>go mod</code> 报错，提示的是 <code>http</code> 地址可猜测是走的 <code>http</code> 协议。问题来了，私有项目 <code>http</code> 方式的 <code>git clone</code> 是需要手动输入密码的，但 <code>go get</code> 中并没有提示输入密码就给出了错误，这种情况怎么处理？</p>
+</li>
+<li><p>既然 <code>ssh</code> 可以免密下载项目，那我们能够使用 <code>ssh</code> 而不是 <code>http</code> 进行访问呢？</p>
+<p>既然脑海中的知识库没有这一部分，就上谷歌搜索吧，万幸有答案可解开疑惑。</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git config --global url."ssh://git@gitlab.com[:8080]".insteadOf "http://gitlab.com[:8080]" # 加入 global 选项方便其他项目使用</span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+</li>
+<li><p>解决了正常的问题，我们再来看看还有哪些可能忽略的点</p>
+<ul>
+<li><p>对于命名不规范的项目如何处理？</p>
+<p>刚开始写代码也没注意那么多，以为可以像 <code>java</code> 那样随意进行 package 命名，只要放置在 <code>GOPATH</code> 就好。导致出现网站域名为 <code>gitlab.example.com</code> 而 package 命名为 <code>example.com/project</code> 的现象，直到使用 <code>go mod</code> 的时候才把自己给坑了。</p>
+<p>翻阅文档可以发现，<code>go mod</code> 提供指定版本/替换 package 的功能，那还等什么呢？用起来吧</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">go mod edit -replace=example.cn/pkg/project@v1.0.0=gitlab.example.cn/pkg/project@v1.0.0</span><br></pre></td></tr></table></figure>
+<p>这里强烈建议每个项目有打 tag 的好习惯，但如果没有 tag，直接使用 master，也是能智能替换的</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">go mod edit -replace=example.cn/pkg/project=gitlab.example.cn/pkg/project@master</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>为什么还是无法正确下载，并在错误里面包含 <code>sum.golang.org</code> 网址？</p>
+<p>下载方式也采用 <code>ssh</code> 了，package 也设置正确了，整理依赖的时候还是会出错，并包含 <code>sum.golang.org</code> 信息，看域名，似乎是一个做校验的网站。校验无非是将内容拉过去，计算一个值用来对比是否被篡改，但私有项目是不能上传去做计算的，所以不能通过也合情合理。</p>
+<p>那么就需要绕过校验了，最开始我比较暴力，不管是私有项目还是公共项目，统统停止校验。</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">go env -w GOSUMDB=off</span><br></pre></td></tr></table></figure>
+<p>但这并不是最佳方案，这样会带来安全隐患，继续谷歌继续造，发现可以将特定的仓库指定为私有仓库，跳过 proxy server 和检查。</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">GOPRIVATE=*.corp.example.com,rsc.io/private # 以逗号隔开,这样 go 命令会把所有包含这个后缀的软件包，包括 git.corp.example.com/xyzzy , rsc.io/private, 和 rsc.io/private/quux 都以私有仓库来对待</span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+</li>
+</ol>
+<h2 id="小结"><a href="#小结" class="headerlink" title="小结"></a>小结</h2><p>探究的过程充满着曲折，但借助谷歌还是完成了目标。尽管这个方案我自己已经实施很久，但由于查阅文档过多，过于分散而没办法指导别人。</p>
+<p>最近发现公司同事都开始使用 <code>go mod</code> 时，是有些兴奋的，拥抱新技术总是让人心潮澎湃，但姿势过于繁杂，一点儿都不优雅，遂准备重走一遍长征路，给大家带来一篇可行的指导。在这个途中，意外推翻了过去的一些概念，对操作的过程有了更清晰的认识。</p>
+<p>越使用 <code>go mod</code>，越有当初使用 <code>java maven</code> 的感觉，相较于 <code>maven</code> 提供了更多便捷的操作。比如在拥有 <code>go.mod</code> 的项目中执行 <code>go get</code> 将自动添加/更新到 <code>go.mod</code> 中，提供查看为什么被引用的 <code>go mod why</code> 命令等。<code>golang</code> 将很多 <code>java</code> 中第三方提供的功能直接整合进 <code>go</code> 命令中，方便开发人员下载 <code>go</code> 就拥有整个生态的功能。</p>
+
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+
+  
+
+
+
+          </div>
+          
+
+<script>
+  window.addEventListener('tabs:register', () => {
+    let { activeClass } = CONFIG.comments;
+    if (CONFIG.comments.storage) {
+      activeClass = localStorage.getItem('comments_active') || activeClass;
+    }
+    if (activeClass) {
+      let activeTab = document.querySelector(`a[href="#comment-${activeClass}"]`);
+      if (activeTab) {
+        activeTab.click();
+      }
+    }
+  });
+  if (CONFIG.comments.storage) {
+    window.addEventListener('tabs:click', event => {
+      if (!event.target.matches('.tabs-comment .tab-content .tab-pane')) return;
+      let commentClass = event.target.classList[1];
+      localStorage.setItem('comments_active', commentClass);
+    });
+  }
+</script>
+
+        </div>
+          
+  
+  <div class="toggle sidebar-toggle">
+    <span class="toggle-line toggle-line-first"></span>
+    <span class="toggle-line toggle-line-middle"></span>
+    <span class="toggle-line toggle-line-last"></span>
+  </div>
+
+  <aside class="sidebar">
+    <div class="sidebar-inner">
+
+      <ul class="sidebar-nav motion-element">
+        <li class="sidebar-nav-toc">
+          文章目录
+        </li>
+        <li class="sidebar-nav-overview">
+          站点概览
+        </li>
+      </ul>
+
+      <!--noindex-->
+      <div class="post-toc-wrap sidebar-panel">
+      </div>
+      <!--/noindex-->
+
+      <div class="site-overview-wrap sidebar-panel">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <img class="site-author-image" itemprop="image" alt="tick" src="/images/avatar.png">
+  <p class="site-author-name" itemprop="name">tick</p>
+  <div class="site-description" itemprop="description"></div>
+</div>
+<div class="site-state-wrap motion-element">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+          <a href="/archives/">
+        
+          <span class="site-state-item-count">1</span>
+          <span class="site-state-item-name">日志</span>
+        </a>
+      </div>
+      <div class="site-state-item site-state-categories">
+            <a href="/categories/">
+          
+        <span class="site-state-item-count">1</span>
+        <span class="site-state-item-name">分类</span></a>
+      </div>
+      <div class="site-state-item site-state-tags">
+            <a href="/tags/">
+          
+        <span class="site-state-item-count">4</span>
+        <span class="site-state-item-name">标签</span></a>
+      </div>
+  </nav>
+</div>
+  <div class="links-of-author motion-element">
+      <span class="links-of-author-item">
+        <a href="https://github.com/SmallTianTian" title="GitHub → https://github.com/SmallTianTian" rel="noopener" target="_blank"><i class="fab fa-github fa-fw"></i>GitHub</a>
+      </span>
+      <span class="links-of-author-item">
+        <a href="mailto:tianxuxin@126.com" title="E-Mail → mailto:tianxuxin@126.com" rel="noopener" target="_blank"><i class="fa fa-envelope fa-fw"></i>E-Mail</a>
+      </span>
+  </div>
+
+
+
+      </div>
+
+    </div>
+  </aside>
+  <div id="sidebar-dimmer"></div>
+
+
+      </div>
+    </main>
+
+    <footer class="footer">
+      <div class="footer-inner">
+        
+
+        
+
+<div class="copyright">
+  
+  &copy; 1996 – 
+  <span itemprop="copyrightYear">2020</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">tick</span>
+</div>
+  <div class="powered-by">由 <a href="https://hexo.io" class="theme-link" rel="noopener" target="_blank">Hexo</a> & <a href="https://theme-next.org" class="theme-link" rel="noopener" target="_blank">NexT.Gemini</a> 强力驱动
+  </div>
+
+        
+
+
+
+
+
+
+
+
+      </div>
+    </footer>
+  </div>
+
+  
+  <script src="/lib/anime.min.js"></script>
+  <script src="/lib/velocity/velocity.min.js"></script>
+  <script src="/lib/velocity/velocity.ui.min.js"></script>
+<script src="/js/utils.js"></script><script src="/js/motion.js"></script>
+<script src="/js/schemes/pisces.js"></script>
+<script src="/js/next-boot.js"></script>
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+  
+
+</body>
+</html>
